@@ -15,9 +15,21 @@ Premium conversion-focused landing page for MJC Cabinets (Orlando, FL) built for
 | `index.html` | Public landing page with form |
 | `admin.html` | Password-protected leads dashboard |
 | `thankyou.html` | Post-submit page (fires conversion events) |
+| `privacy.html` | Privacy Policy (required for Meta Ads) |
+| `terms.html` | Terms of Use |
+| `robots.txt` | Crawler directives |
+| `sitemap.xml` | Sitemap for Google indexing |
 | `config.js` | Runtime config (Supabase URL/key, Pixel IDs, admin password) |
 | `vercel.json` | Vercel deployment config (cache headers, redirects, noindex admin) |
 | `images/` | Project photos, logo variants |
+
+## SEO (JSON-LD schemas embedded in index.html)
+- **HomeAndConstructionBusiness** — business info, hours, geo, aggregate rating
+- **Service** (x4) — Kitchen cabinets, Remodel, Bathroom, Closet with price range
+- **FAQPage** — 8 Q&As that surface as rich snippets
+- **Review** (x4) — individual testimonials with star ratings
+
+Plus: canonical URL, OG image (1200x630 declared), preload hero/logo for LCP, robots.txt, sitemap.xml, geo tags.
 
 ## URLs (after deploy)
 | Path | Purpose |

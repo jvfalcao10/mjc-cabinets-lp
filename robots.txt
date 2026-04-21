@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Block admin and thank-you (thank-you is post-conversion, no SEO value)
+Disallow: /admin
+Disallow: /admin.html
+Disallow: /thankyou
+Disallow: /thankyou.html
+
+# Block config files
+Disallow: /config.js
+Disallow: /vercel.json
+
+Sitemap: https://lp.mjckitchen.com/sitemap.xml
