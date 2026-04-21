@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You — MJC Cabinet Design Solutions</title>
+  <meta name="description" content="Thanks for requesting your free custom kitchen estimate. We'll call you within 24 hours.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#0c2a54">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230c2a54%22/><text y=%2272%22 x=%2250%22 font-size=%2264%22 text-anchor=%22middle%22 fill=%22%23e6af5d%22 font-family=%22serif%22 font-weight=%22700%22>M</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="config.js"></script>
+
+  <!-- Meta Pixel — fires Lead + PageView on this page too -->
+  <script>
+    (function () {
+      var id = (window.MJC_CONFIG || {}).META_PIXEL_ID;
+      if (!id) return;
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+      s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', id);
+      fbq('track', 'PageView');
+      fbq('track', 'Lead', { content_category: 'thank_you', value: 1, currency: 'USD' });
+    })();
+  </script>
+
+  <!-- Google Tag -->
+  <script>
+    (function () {
+      var id = (window.MJC_CONFIG || {}).GOOGLE_GTAG_ID;
+      if (!id) return;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', id);
+      var label = (window.MJC_CONFIG || {}).GOOGLE_CONVERSION_LABEL;
+      gtag('event', 'conversion', label
+        ? { send_to: id + '/' + label }
+        : { event_category: 'lead', event_label: 'thank_you_page' });
+    })();
+  </script>
+
+  <style>
+    :root {
+      --gold: #c9a14b;
+      --gold-bright: #e6af5d;
+      --gold-hover: #b8923d;
+      --navy: #0c2a54;
+      --navy-deep: #081f40;
+      --cream: #faf8f3;
+      --cream-alt: #f5f1e8;
+      --white: #ffffff;
+      --ink: #0c2a54;
+      --ink-soft: #2a3f5f;
+      --muted: #6b6760;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--navy);
+      color: var(--cream);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    .ty-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 24px;
+      background:
+        radial-gradient(ellipse at top, rgba(201,161,75,0.12) 0%, transparent 60%),
+        linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+    }
+
+    .ty-card {
+      max-width: 620px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .ty-logo img {
+      height: 72px;
+      margin: 0 auto 36px;
+    }
+
+    .checkmark {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(230,175,93,0.12);
+      border: 1.5px solid var(--gold-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 32px;
+      animation: pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+    @keyframes pop {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .checkmark svg { color: var(--gold-bright); }
+
+    .ty-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-bright);
+      margin-bottom: 16px;
+    }
+    .ty-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      color: var(--cream);
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -0.015em;
+    }
+    .ty-title em { color: var(--gold-bright); font-style: italic; }
+    .ty-sub {
+      font-size: 17px;
+      color: rgba(250,248,243,0.75);
+      line-height: 1.7;
+      max-width: 540px;
+      margin: 0 auto 40px;
+    }
+
+    .next-steps {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 32px 32px 28px;
+      margin-bottom: 36px;
+      text-align: left;
+    }
+    .ns-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: var(--gold-bright);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .ns-list { list-style: none; padding: 0; }
+    .ns-list li {
+      padding: 12px 0;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 14px;
+      color: rgba(250,248,243,0.82);
+      line-height: 1.6;
+    }
+    .ns-list li:last-child { border-bottom: none; }
+    .ns-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gold-bright);
+      flex-shrink: 0;
+      width: 24px;
+    }
+    .ns-list strong { color: var(--cream); font-weight: 600; }
+
+    .ty-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 14px 28px;
+      border-radius: 3px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s;
+      border: 1px solid;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      border-color: var(--gold);
+    }
+    .btn-primary:hover { background: var(--gold-bright); border-color: var(--gold-bright); transform: translateY(-2px); }
+    .btn-ghost {
+      background: transparent;
+      color: var(--cream);
+      border-color: rgba(255,255,255,0.2);
+    }
+    .btn-ghost:hover { border-color: var(--gold-bright); color: var(--gold-bright); }
+
+    .urgency {
+      margin-top: 36px;
+      font-size: 13px;
+      color: rgba(250,248,243,0.6);
+      line-height: 1.6;
+    }
+    .urgency strong { color: var(--gold-bright); font-weight: 600; }
+
+    .ty-footer {
+      padding: 24px;
+      text-align: center;
+      font-size: 12px;
+      color: rgba(250,248,243,0.4);
+      background: var(--navy-deep);
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    @media (max-width: 600px) {
+      .ty-main { padding: 40px 20px; }
+      .next-steps { padding: 24px 20px; }
+      .ty-actions { flex-direction: column; width: 100%; }
+      .btn { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="ty-main">
+    <div class="ty-card">
+      <div class="ty-logo">
+        <img src="logo-mjc-gold.png" alt="MJC Cabinet Design Solutions">
+      </div>
+
+      <div class="checkmark">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+
+      <p class="ty-eyebrow">Request received</p>
+      <h1 class="ty-title">Thank you — <em>your estimate is on the way.</em></h1>
+      <p class="ty-sub">We just got your request. One of our Orlando team members will reach out within <strong style="color:var(--cream);">24 hours</strong> to schedule your free consultation and 3D design.</p>
+
+      <div class="next-steps">
+        <div class="ns-title">What happens next</div>
+        <ul class="ns-list">
+          <li><span class="ns-num">1.</span><span><strong>We'll call you within 24 hours</strong> to confirm your project details and book a time that works.</span></li>
+          <li><span class="ns-num">2.</span><span>We visit your home (or send our <strong>mobile showroom van</strong>) for measurement and style discussion.</span></li>
+          <li><span class="ns-num">3.</span><span>You get a <strong>free 3D design</strong> plus a fixed, itemized quote. No pressure, no obligation.</span></li>
+        </ul>
+      </div>
+
+      <div class="ty-actions">
+        <a href="https://wa.me/12392960689?text=Hi!%20I%20just%20submitted%20my%20custom%20cabinet%20request." class="btn btn-primary" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2m0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31c-.82-1.31-1.26-2.83-1.26-4.38 0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42 1.56 1.56 2.42 3.62 2.42 5.82 0 4.54-3.7 8.24-8.24 8.24m4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43-.14 0-.31-.02-.48-.02-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18s-.23-.16-.48-.28"/></svg>
+          Chat on WhatsApp
+        </a>
+        <a href="tel:+12392960689" class="btn btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (239) 296-0689
+        </a>
+      </div>
+
+      <p class="urgency">Got questions now? <strong>Reply on WhatsApp</strong> for the fastest response — we usually get back in minutes during business hours.</p>
+    </div>
+  </main>
+
+  <footer class="ty-footer">
+    © 2026 MJC Cabinet Design Solutions · 5014 Forsyth Commerce Rd, Orlando, FL 32807
+  </footer>
+
+  <script>
+    // Phone/WhatsApp click tracking
+    document.querySelectorAll('a[href^="tel:"]').forEach(a => {
+      a.addEventListener('click', () => {
+        if (window.fbq) fbq('track', 'Contact');
+        if (window.gtag) gtag('event', 'phone_click', { event_category: 'thank_you' });
+      });
+    });
+    document.querySelectorAll('a[href*="wa.me"]').forEach(a => {
+      a.addEventListener('click', () => {
+        if (window.fbq) fbq('track', 'Contact', { method: 'whatsapp' });
+        if (window.gtag) gtag('event', 'whatsapp_click', { event_category: 'thank_you' });
+      });
+    });
+  </script>
+</body>
+</html>
