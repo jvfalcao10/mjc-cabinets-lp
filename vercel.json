@@ -30,9 +30,5 @@
         { "key": "Cache-Control", "value": "no-store" }
       ]
     }
-  ],
-  "redirects": [
-    { "source": "/admin", "destination": "/admin.html", "permanent": false },
-    { "source": "/thankyou", "destination": "/thankyou.html", "permanent": false }
   ]
 }
