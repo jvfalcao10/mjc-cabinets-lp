@@ -1,14 +1,108 @@
+# MJC Cabinet Design Solutions — robots.txt
+# Site: https://lp.mjckitchen.com/
+
+# === Default: allow all well-behaved crawlers ===
 User-agent: *
 Allow: /
-
-# Block admin and thank-you (thank-you is post-conversion, no SEO value)
 Disallow: /admin
 Disallow: /admin.html
 Disallow: /thankyou
 Disallow: /thankyou.html
-
-# Block config files
 Disallow: /config.js
 Disallow: /vercel.json
+
+# === AI Search Bots — explicitly allowed ===
+# Blocking these means the platform can't cite you in AI answers.
+# We WANT to be cited by ChatGPT, Perplexity, Claude, Gemini, Copilot.
+
+User-agent: GPTBot
+Allow: /
+Disallow: /admin
+Disallow: /thankyou
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin
+Disallow: /thankyou
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin
+Disallow: /thankyou
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin
+Disallow: /thankyou
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /admin
+Disallow: /thankyou
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin
+Disallow: /thankyou
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /admin
+Disallow: /thankyou
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /admin
+Disallow: /thankyou
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /admin
+Disallow: /thankyou
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin
+Disallow: /thankyou
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin
+Disallow: /thankyou
+
+User-agent: Applebot
+Allow: /
+Disallow: /admin
+Disallow: /thankyou
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /admin
+Disallow: /thankyou
+
+User-agent: Bytespider
+Allow: /
+Disallow: /admin
+Disallow: /thankyou
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /admin
+Disallow: /thankyou
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /admin
+Disallow: /thankyou
+
+User-agent: FacebookBot
+Allow: /
+Disallow: /admin
+Disallow: /thankyou
+
+User-agent: DuckAssistBot
+Allow: /
+Disallow: /admin
+Disallow: /thankyou
 
 Sitemap: https://lp.mjckitchen.com/sitemap.xml
