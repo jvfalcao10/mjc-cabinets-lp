@@ -8,8 +8,9 @@ window.MJC_CONFIG = {
   // Admin password (validated server-side via RPC mjc_verify_admin)
   ADMIN_PASSWORD: 'mjccab123',
 
-  // Ad tracking (fill with your real IDs)
-  META_PIXEL_ID: '',       // e.g. '123456789012345'
+  // Ad tracking
+  META_PIXEL_ID: '870124732758772',
+  GTM_ID: 'GTM-NBP8TMJJ',
   GOOGLE_GTAG_ID: '',      // e.g. 'AW-123456789'
   GOOGLE_CONVERSION_LABEL: '', // e.g. 'AbC-D_efG123'
 
