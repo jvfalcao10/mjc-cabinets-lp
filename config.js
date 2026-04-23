@@ -10,7 +10,7 @@ window.MJC_CONFIG = {
 
   // Ad tracking
   META_PIXEL_ID: '870124732758772',
-  GTM_ID: 'GTM-NBP8TMJJ',
+  GTM_ID: 'GTM-TH9JMNMP',
   GOOGLE_GTAG_ID: '',      // e.g. 'AW-123456789'
   GOOGLE_CONVERSION_LABEL: '', // e.g. 'AbC-D_efG123'
 
