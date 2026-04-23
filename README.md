@@ -114,15 +114,38 @@ GOOGLE_GTAG_ID: 'AW-1234567890',      // from Google Ads
 GOOGLE_CONVERSION_LABEL: 'AbC-D_efG', // from conversion action setup
 ```
 
-**Events fired:**
-| Event | Where | Platform |
-|---|---|---|
-| `PageView` | every page | Meta + Google |
-| `Lead` | form submit success | Meta |
-| `Lead` + `PageView` | thank-you page | Meta |
-| `conversion` | thank-you page | Google Ads |
-| `Contact` | phone/WhatsApp click | Meta |
-| `phone_click`, `whatsapp_click` | phone/WhatsApp click | Google |
+**Events fired (tracking.js centraliza tudo):**
+
+| Event | Where | GTM dataLayer | Meta Pixel |
+|---|---|---|---|
+| `PageView` | every page | ✅ | `PageView` |
+| `session_context` | on load | ✅ (utm/device/referrer) | - |
+| `scroll_depth` | 25/50/75/90% | ✅ `{depth}` | `ViewContent` @50%, `ScrollDeep90` @90% |
+| `time_on_page` | 15/30/60/120/300s | ✅ | - |
+| `engaged_user` | >30s OR >50% scroll | ✅ | `EngagedUser` |
+| `section_view` | hero, portfolio, faq, etc. | ✅ `{section}` | - |
+| `cta_click` | any primary CTA | ✅ `{cta_text, cta_location}` | - |
+| `phone_click` | tel: links | ✅ | `Contact {method:phone}` |
+| `whatsapp_click` | wa.me links | ✅ | `Contact {method:whatsapp}` |
+| `sms_click`, `email_click` | sms:/mailto: | ✅ | `Contact` |
+| `form_start` | first focus | ✅ | `InitiateCheckout` |
+| `form_field_focus` | each field | ✅ `{field}` | - |
+| `form_field_complete` | each field | ✅ `{field}` | - |
+| `form_submit_attempt` | on submit | ✅ | - |
+| `form_abandon` | started, didn't submit | ✅ `{fields_completed}` | `FormAbandon` |
+| `generate_lead` | form success | ✅ | `Lead` + **Advanced Matching (SHA-256)** |
+| `conversion` | thank-you page | ✅ | `Lead` |
+| `faq_expand` | each FAQ open | ✅ `{question}` | - |
+| `portfolio_filter` | category tab click | ✅ `{filter}` | - |
+| `video_play/pause/ended` | any `<video>` | ✅ | - |
+| `testimonial_nav` | carousel prev/next | ✅ `{dir}` | - |
+| `web_vitals` | on pagehide | ✅ `{lcp_ms, cls}` | - |
+| `outbound_click` | external links | ✅ `{url}` | - |
+| `js_error` | runtime errors | ✅ `{message, source}` | - |
+
+**Advanced Matching:** email, phone, first/last name, city, state, country are SHA-256 hashed client-side before `fbq('init')` fires. This improves match rate in Meta Ads Manager without leaking PII.
+
+**UTM capture:** `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `utm_term`, `fbclid`, `gclid` are persisted to `localStorage` on landing and sent with every event via `session_context`.
 
 **UTM capture:** `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `utm_term` are persisted to `localStorage` on landing and sent with the lead. Admin sees them in the Source column.
 

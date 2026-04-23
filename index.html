@@ -288,6 +288,7 @@
 
   <!-- Runtime config -->
   <script src="config.js"></script>
+  <script src="tracking.js" defer></script>
 
   <!-- Meta Pixel (fires only if META_PIXEL_ID is set in config.js) -->
   <script>
@@ -2585,8 +2586,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         const { error } = await sb.from(CFG.LEADS_TABLE || 'mjc_leads').insert(payload);
         if (error) throw error;
 
-        // Ad conversion events
-        if (window.fbq) fbq('track', 'Lead', { content_category: payload.project, value: 1, currency: 'USD' });
+        // Ad conversion events — Advanced Matching via tracking.js
+        if (window.MJC_TRACK && window.MJC_TRACK.fireLead) {
+          window.MJC_TRACK.fireLead(payload);
+        } else if (window.fbq) {
+          fbq('track', 'Lead', { content_category: payload.project, value: 1, currency: 'USD' });
+        }
         if (window.gtag && CFG.GOOGLE_GTAG_ID) {
           const label = CFG.GOOGLE_CONVERSION_LABEL;
           gtag('event', 'conversion', label
